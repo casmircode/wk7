@@ -5,7 +5,7 @@ let app = express();
 let User = require('./models/user')
 let Car = require('./models/car')
 
-let url = "mongodb://localhost:27017/week6";
+let url = "mongodb://localhost:27017/wk7";
 
 mongoose.connect(url, function(err){
     if(err) console.log(err);
@@ -34,7 +34,7 @@ mongoose.connect(url, function(err){
             })
         });   
     }
-});k
+});
 
 app.get('/getusers', (req,res)=>{
     User.find().limit(3).sort({age: -1}).exec(function(err,data){
