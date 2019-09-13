@@ -6,7 +6,8 @@ let app = express();
 let Task = require('./models/tasks')
 let Developer = require('./models/developers')
 
-let url = "mongodb://localhost:27017/wk7";
+// let url = "mongodb://localhost:27017/wk7";
+const url = "mongodb://" + process.argv[2] + ":27017/" + process.argv[3];
 let viewsPath = __dirname + "/views/";
 app.engine('html', require("ejs").renderFile);
 app.use(express.static('images'));
