@@ -1,0 +1,66 @@
+
+<html>
+
+    <head>
+      <link rel="stylesheet" href="styles.css">
+    
+      
+    </head>
+    
+    <body>
+        <div class='tasks'>
+        <img src='dp.png'>
+        <div class='task-bd'>
+        <h2>Current Developers</h2><br>
+      <table class='center'>
+        <tr>
+
+            <td>DeveloperID</td> <td>FirstName</td><td>SecondName</td>
+            <td>Level</td> <td>Status</td> <td>Suburb</td>
+            <td>Street</td> <td>Unit</td>
+
+        </tr>
+          <% for(var i=0;i<taskDb.length;i++){ %>
+          <tr>
+            <td>
+              <%= taskDb[i]._id %>
+            </td>
+            <td>
+              <%= taskDb[i].name.firstName %>
+            </td>
+            <td>
+              <%= taskDb[i].name.lastName %>
+            </td>
+            <td>
+              <%= taskDb[i].level %>
+            </td>
+            <td>
+              <%= taskDb[i].address.state %>
+            </td>
+            <td>
+              <%= taskDb[i].address.suburb %>
+            </td>
+            <td>
+              <%= taskDb[i].address.street %>
+            </td>
+            <td>
+              <%= taskDb[i].address.unit %>
+            </td>
+          </tr>
+          <% }%>
+        </table>
+      
+      <br>
+      
+              <h3> <a href="/">Home</a> </h3>
+              <h3> <a href="newtask.html">New Task</a> </h3>
+              <h3> <a href="gettask.html">Tasks</a> </h3>
+              <h3> <a href="newdev.html">New Developer</a></h3>
+              <h3> <a href="updatetask.html">Update Task</a> </h3>
+              <h3> <a href="deletetask.html">Delete Task</a> </h3>
+              <h3> <a href="deleteall.html">Delete All Completed Task</a> </h3>
+            </div>
+      </div>
+    </body>
+    
+    </html>
